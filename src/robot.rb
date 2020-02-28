@@ -20,7 +20,6 @@ class Robot
       when 'L' || 'R'
         rotate current_waypoint
       end
-     StandardError if edge_collision
     end
   end
 

@@ -30,4 +30,8 @@ class TestRobot < Minitest::Test
   def test_edge_collision
     proc { @robot.move('LLMMM') }.must_raise StandardError
   end
+
+  def test_pre_move
+    assert_equal '0 2 S', @robot.pre_move({}, ['L', 'M', 'L'])
+  end
 end
